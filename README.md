@@ -1,53 +1,26 @@
-# adb Toolbox [macOS] - for android and mac users
+# adbToolbox - for android and mac users
 
-HI!
+This software is thought for Android users that use a **macOS (or OS X)** system. It semplify easy or not action you can perform with **Android-Debug-Bridge (ADB)**.
 
-If you want to follow the development of this app, consider to subscribe to my Telegram Channel
+![Image](http://adbtoolbox.altervista.org/wp-content/uploads/2019/03/Schermata-2019-03-02-alle-18.55.43.png)
 
+   **Basic Commands**
+       - reboot
+       - reboot recovery mode
+       - reboot bootloader mode
+       - reboot download mode 
 
-##       **TELEGRAM CHANNEL**
+   **Modding Commands**
+       - Unlock bootloader
+       - Lock bootloader
+       - Flash recovery.img
+       - Flash zip file
+       - Push files from Mac to Android
 
-
-- https://t.me/adbToolbox
-
-
-
-##            **CHANGELOG**
-
-
-### v.1.0 - initial release
---Features--
-
-- Basic Commands
-   - reboot
-   - reboot recovery mode
-   - reboot bootloader mode
-   - reboot download mode
-
-- Modding Commands
-   - Unlock bootloader
-   - Lock bootloader
-   - Flash recovery.img
-   - Flash zip file
-   - Push files from Mac to Android [bugs]
-
-- Other Commands
-   - Install APK [bugs]
-   - Uninstall APP (system too)[bugs]
-   
-   
-### v.2.0 - stable release
-- Fixed bugs (push. install, uninstall)
-- restyling of UI
-- mojave compatibility
+   **Other Commands**
+       - Install APK
+       - Uninstall APP 
 
 
-
-##             **BUGS**
-
-
--you tell me, see the telegram
- channel linked above for info
-
-
+**V.3.0 - stable**
 
