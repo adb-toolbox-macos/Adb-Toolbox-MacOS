@@ -27,6 +27,7 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
+    
 
     @IBAction func reboot(_ sender: Any) {
         let task = Process()
@@ -61,7 +62,7 @@ class ViewController: NSViewController {
         if check.state == .on{
             let task = Process()
             task.launchPath = "/bin/bash"
-            task.arguments = ["-c", "/Applications/AdbToolbox.app/source/fastboot oem unlock"]
+            task.arguments = ["-c", "/Applications/AdbToolbox.app/source/fastboot flashing unlock"]
             task.launch()
             let message = "STATUS: OK"
             status.stringValue = message
@@ -71,6 +72,26 @@ class ViewController: NSViewController {
             status.stringValue = message
         }
     }
+    
+    @IBOutlet weak var status_critical: NSTextField!
+    @IBOutlet weak var check_critical: NSButton!
+    
+    
+    @IBAction func Unlock_critical(_ sender: Any) {
+        if check_critical.state == .on{
+            let task = Process()
+            task.launchPath = "/bin/bash"
+            task.arguments = ["-c", "/Applications/AdbToolbox.app/source/fastboot flashing unlock_critical"]
+            task.launch()
+            let message = "STATUS: OK"
+            status_critical.stringValue = message
+        }
+        else{
+            let message = "STATUS: FAILED"
+            status_critical.stringValue = message
+        }
+    }
+    
     
     @IBOutlet weak var recovery_dir: NSTextField!
     @IBAction func flash_recovery(_ sender: Any) {
@@ -118,7 +139,7 @@ class ViewController: NSViewController {
         if check_2.state == .on{
             let task = Process()
             task.launchPath = "/bin/bash"
-            task.arguments = ["-c", "/Applications/AdbToolbox.app/source/fastboot oem lock"]
+            task.arguments = ["-c", "/Applications/AdbToolbox.app/source/fastboot flashing lock"]
             task.launch()
             let message = "STATUS: OK"
             status_2.stringValue = message
@@ -149,6 +170,23 @@ class ViewController: NSViewController {
         task.launchPath = "/bin/bash"
         task.arguments = ["-c", "/Applications/AdbToolbox.app/source/adb shell pm uninstall -k --user 0 \(dir4)"]
     }
+    
+    
+    
+    @IBAction func Telegram_channel(_ sender: Any) {
+        let url = URL(string: "https://t.me/adbtoolbox")
+        NSWorkspace.shared.open(NSURL(string: "https://t.me/adbtoolbox")! as URL)
+    }
+    
+    
+    @IBOutlet weak var device_name: NSTextField!
+    @IBAction func device(_ sender: Any) {
+        let task = Process()
+        task.launchPath = "/bin/bash"
+        task.arguments = ["-c", "/Applications/AdbToolbox.app/source/adb shell getprop ro.product.model > file.txt"]
+        
+    }
+    
     
 }
 
