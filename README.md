@@ -2,7 +2,7 @@
 
 This software is thought for Android users that use a **macOS (or OS X)** system. It semplify easy or not action you can perform with **Android-Debug-Bridge (ADB)**.
 
-![Image](http://adbtoolbox.altervista.org/wp-content/uploads/2019/03/Schermata-2019-03-02-alle-18.55.43.png)
+![Image](http://adbtoolbox.altervista.org/wp-content/uploads/2019/04/Schermata-2019-03-28-alle-15.02.36.png)
 
 **Basic Commands**
 - reboot
